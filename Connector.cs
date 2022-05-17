@@ -19,12 +19,12 @@ public TextMeshPro Text;
    }
 
     IEnumerator GetText() {
-  UnityWebRequest www = UnityWebRequest.Get("http://10.90.22.13:8080/Thingworx/Things/UPPE/Properties/TIT-102-FF");
+  UnityWebRequest www = UnityWebRequest.Get("xxx");
 
              www.SetRequestHeader("Content-Type", "application/JSON");
              www.SetRequestHeader("Accept", "application/JSON");
              www.SetRequestHeader("x-thingworx-session", "true");
-             www.SetRequestHeader("appKey", "635bd18c-cd4d-48e7-a7ee-f0a6c4c94c04");
+             www.SetRequestHeader("appKey", "xxx");
 
         yield return www.SendWebRequest();
 
