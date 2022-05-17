@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using TMPro;
 
  [System.Serializable]
-public class Connector : MonoBehaviour {
+    public class UnityWebRequest : MonoBehaviour {
 
- private float nextActionTime = 0.0f;
- public float period = 0.1f;
+    private float nextActionTime = 0.0f;
+    public float period = 0.1f;
  
 public TextMeshPro Text;  
 
@@ -19,7 +19,8 @@ public TextMeshPro Text;
    }
 
     IEnumerator GetText() {
-  UnityWebRequest www = UnityWebRequest.Get("xxx");
+       
+       UnityWebRequest www = UnityWebRequest.Get("xxx");
 
              www.SetRequestHeader("Content-Type", "application/JSON");
              www.SetRequestHeader("Accept", "application/JSON");
@@ -42,11 +43,8 @@ public TextMeshPro Text;
 
  void Update () {
 
- 
     StartCoroutine(GetText());
       
-        
-   
  }
 
 }
